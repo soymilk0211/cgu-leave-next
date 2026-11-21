@@ -21,3 +21,7 @@ python3 -m http.server 8000
 ## 請不要
 
 未再取得明確同意前，請不要部署（含 Vercel、GitHub Pages、自訂網域）、申請或使用 TDX 金鑰、加入分析工具，或對外推廣。
+
+## 測試
+
+`node --test tests/`（無相依套件）。頁面需透過靜態伺服器開啟（例如 `python3 -m http.server`），因為會 fetch 資料檔。
