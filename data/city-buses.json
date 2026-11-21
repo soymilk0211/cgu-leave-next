@@ -17,12 +17,11 @@
    ],
    "live_url": "https://ebus.gov.taipei/EBus/VsSimpleMap?routeid=0400096700&gb=1",
    "live_checked": "2026-11-21",
-   "timetable_status": "terminus_only",
-   "note": "以下是端點（體育大學行政教學大樓）發車時刻，不是長庚大學候車亭到站時刻；候車亭逐班時刻查不到官方分站表。須搭跑馬燈標示「往長庚大學」的車。",
+   "timetable_status": "operator_labeled",
+   "note": "業者三重客運官方 PDF 標示為「長庚大學發車」（與 ebus.gov.taipei 體育大學行政教學大樓班表逐筆相同）。這是發車時刻，不是候車亭到站時刻；站間行車分鐘數查不到（未驗證），本頁不加減分鐘。須搭跑馬燈標示「往長庚大學」的車。",
    "timetables": [
     {
      "kind": "平日",
-     "terminus": "體育大學行政教學大樓",
      "times": [
       "05:10",
       "06:00",
@@ -50,11 +49,11 @@
       "20:00",
       "20:40",
       "21:30"
-     ]
+     ],
+     "label": "長庚大學發車（業者標示）"
     },
     {
      "kind": "假日",
-     "terminus": "體育大學行政教學大樓",
      "times": [
       "05:10",
       "06:30",
@@ -71,11 +70,13 @@
       "19:00",
       "20:00",
       "21:30"
-     ]
+     ],
+     "label": "長庚大學發車（業者標示）"
     }
    ],
-   "source_url": "https://ebus.gov.taipei/Route/StopsOfRoute?routeid=0400096700",
-   "last_checked": "2026-11-21"
+   "source_url": "https://www.sanchung-bus.com.tw/image/967.pdf",
+   "last_checked": "2026-11-21",
+   "also_source": "https://ebus.gov.taipei/Route/StopsOfRoute?routeid=0400096700"
   },
   {
    "id": "967直",
@@ -91,7 +92,7 @@
    "live_url": "https://ebus.gov.taipei/EBus/VsSimpleMap?gb=0&routeid=0400096730",
    "live_checked": "2026-11-21",
    "timetable_status": "terminus_only",
-   "note": "以下是官方頁所列端點發車時刻，不是長庚大學候車亭到站時刻；候車亭逐班時刻查不到官方分站表。",
+   "note": "以下是官方頁所列端點發車時刻，不是長庚大學候車亭到站時刻；站間分鐘數與長庚大學發車時刻查不到（未驗證）。",
    "timetables": [
     {
      "kind": "平日",
@@ -152,10 +153,38 @@
    ],
    "live_url": "https://yunbus.tw/#!route/TAO2020",
    "live_checked": "2026-11-21",
-   "timetable_status": "unverified",
-   "note": "完整官方靜態班表查不到（未驗證），本頁不列任何 202 時間，也不確認有無 17:00 班次。請看官方動態頁。",
-   "timetables": [],
-   "source_url": "https://yunbus.tw/lite/route.php?id=TAO2020",
+   "timetable_status": "verified",
+   "note": "以下是體育大學行政教學大樓（起點）發車時刻，長庚大學為下一站；官方未提供長庚大學到站分鐘數（未驗證）。僅列往捷運體育大學站／林口長庚方向；反方向（先經大埔／長庚桃園分院）不列。",
+   "timetables": [
+    {
+     "kind": "平日",
+     "label": "往捷運體育大學站／林口長庚",
+     "time_template": "約 {t} 從體育大學發車，長庚大學為下一站",
+     "terminus": null,
+     "times": [
+      "07:30",
+      "10:10",
+      "14:20",
+      "15:40",
+      "17:00",
+      "18:30",
+      "20:10"
+     ]
+    },
+    {
+     "kind": "假日（含週六）",
+     "label": "往捷運體育大學站／林口長庚",
+     "time_template": "約 {t} 從體育大學發車，長庚大學為下一站",
+     "terminus": null,
+     "times": [
+      "09:10",
+      "14:20",
+      "17:00",
+      "18:50"
+     ]
+    }
+   ],
+   "source_url": "https://ebus.tycg.gov.tw/ebus/time-table/2020",
    "last_checked": "2026-11-21"
   },
   {
@@ -171,8 +200,8 @@
    ],
    "live_url": "https://yunbus.tw/lite/route.php?id=TAO6030",
    "live_checked": "2026-11-21",
-   "timetable_status": "operator_unlabeled",
-   "note": "三重客運 603 時刻表 PDF（檔案日期 2025-03-07）未標示發車站或方向，以下不是候車亭到站時刻。",
+   "timetable_status": "origin_verified",
+   "note": "長庚大學為起點（循環線）；時刻與三重客運 PDF、桃園公車動態網逐筆相同。這是起點發車時刻，不是候車亭到站時刻（未驗證）。",
    "timetables": [
     {
      "kind": "平日",
@@ -202,7 +231,8 @@
       "20:00",
       "21:00",
       "22:00"
-     ]
+     ],
+     "label": "長庚大學發車（起點，循環線）"
     },
     {
      "kind": "假日",
@@ -224,11 +254,13 @@
       "20:00",
       "21:00",
       "22:00"
-     ]
+     ],
+     "label": "長庚大學發車（起點，循環線）"
     }
    ],
    "source_url": "https://www.sanchung-bus.com.tw/image/603.pdf",
-   "last_checked": "2026-11-21"
+   "last_checked": "2026-11-21",
+   "also_source": "https://ebus.tycg.gov.tw/ebus/time-table/6030"
   }
  ]
 }

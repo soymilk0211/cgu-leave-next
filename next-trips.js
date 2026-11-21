@@ -14,7 +14,7 @@
   // opts.dayKinds: optional {YYYY-MM-DD: 'friday'|'sunday'|'none'} for 連假 days (the data has no holiday calendar).
   function nextTrips(data, now, origin, dest, opts) {
     const t = taipei(now);
-    const base = { date: t.date, limit: 3, caveat: data.caveat.zh };
+    const base = { date: t.date, limit: 3, caveat: data.caveat.zh, breakNote: data.day_rules.break };
     if (!STOP[origin] || !TO_A7.includes(dest)) return { ...base, status: 'no_route' };
 
     const ov = data.overrides.find((o) => o.valid_on === t.date);
@@ -26,7 +26,7 @@
       const sched = kind === 'sunday' || (!kind && t.dow === 0) ? ['sun_holiday']
         : kind === 'friday' || (!kind && t.dow === 5) ? ['mon_fri', 'friday_preholiday_extra']
         : !kind && t.dow >= 1 && t.dow <= 4 ? ['mon_fri'] : null;
-      if (!sched) return { ...base, status: 'unverified' }; // Saturday: not stated by the source
+      if (!sched) return { ...base, status: 'no_saturday', message: data.day_rules.saturday }; // sheet column is "Sun. and Holidays": Saturday has no regular trips
       pool = data.trips.filter((x) => sched.includes(x.schedule));
       if (sched[0] === 'sun_holiday') note = '星期日／例假日官方表只列下午班次。';
     }

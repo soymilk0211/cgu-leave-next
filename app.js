@@ -10,7 +10,7 @@
 
   function render(now) {
     const r = NextTrips.nextTrips(data, now, $('origin').value, $('dest').value);
-    const msg = { no_route: '此出發點／目的地組合沒有家豪班次（家豪只往返 A7 站與校區）。', no_service: '今日無家豪班次', unverified: '官方時刻表未載明週六是否行駛，無法列出班次（未確認，請查總務處公告）。' }[r.status];
+    const msg = { no_route: '此出發點／目的地組合沒有家豪班次（家豪只往返 A7 站與校區）。', no_service: '今日無家豪班次', no_saturday: r.message }[r.status];
     box.replaceChildren();
     const add = (tag, text, cls) => { const e = document.createElement(tag); e.textContent = text; if (cls) e.className = cls; box.append(e); return e; };
     if (msg) add('p', msg);
@@ -27,6 +27,7 @@
       }
       if (r.noMore) add('p', r.trips.length ? '今日沒有更多班次了。' : '今日已無後續家豪班次。');
     }
+    add('p', r.breakNote, 'muted');
     add('p', r.caveat, 'caveat');
     add('p', '候車亭／明德樓的時間取自官方時刻表欄位，表上未註明是到達或發車時間。', 'muted');
   }
@@ -44,10 +45,9 @@
       const d = document.createElement('div');
       add(d, 'h3', r.name);
       add(d, 'p', r.note, 'caveat');
-      if (r.timetable_status === 'unverified') add(d, 'p', '靜態班表：查不到（未驗證）');
-      for (const t of r.timetables) {
-        add(d, 'h4', t.kind + (t.terminus ? '（' + t.terminus + '發車）' : ''));
-        add(d, 'p', t.times.join('、'));
+            for (const t of r.timetables) {
+        add(d, 'h4', t.kind + (t.label ? '：' + t.label : t.terminus ? '（' + t.terminus + '發車）' : ''));
+        add(d, 'p', t.time_template ? t.times.map((x) => t.time_template.replace('{t}', x)).join('；') : t.times.join('、'));
       }
       const a = add(d, 'p', ''); const l = document.createElement('a');
       l.href = r.live_url; l.target = '_blank'; l.rel = 'noopener noreferrer'; l.textContent = '官方即時動態頁（另開分頁）';
