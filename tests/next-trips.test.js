@@ -41,9 +41,18 @@ test('non-service day (連假 during) says no service', () => {
   assert.strictEqual(r.status, 'no_service');
 });
 
-test('Saturday stays unverified; Sunday uses afternoon table only', () => {
-  assert.strictEqual(nextTrips(data, at('2026-11-28T10:00:00'), '候車亭', 'A7').status, 'unverified');
-  assert.strictEqual(times(nextTrips(data, at('2026-11-22T08:00:00'), '候車亭', 'A7'))[0], '17:00');
+test('Saturday: no regular trips + message; Sunday uses Sun/holiday column; Friday has extras', () => {
+  for (const o of ['候車亭', '明德樓']) {
+    const sat = nextTrips(data, at('2026-11-28T10:00:00'), o, 'A7');
+    assert.strictEqual(sat.status, 'no_saturday');
+    assert.strictEqual(sat.message, '週六常態無校車，請改搭 603／967／202');
+    assert.ok(!sat.trips);
+  }
+  assert.strictEqual(nextTrips(data, at('2026-11-28T10:00:00'), '候車亭', 'A7').breakNote, '寒暑假班表另行公告，請看總務處');
+  const sun = nextTrips(data, at('2026-11-29T08:00:00'), '候車亭', 'A7');
+  assert.strictEqual(times(sun)[0], '17:00');
+  assert.ok(sun.note.includes('星期日'));
+  assert.ok(nextTrips(data, at('2026-11-27T19:10:00'), '明德樓', 'A7').trips.some((t) => t.extra && t.time === '19:15'));
 });
 
 test('2026-11-21 sports-day override only on that date', () => {

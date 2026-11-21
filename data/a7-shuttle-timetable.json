@@ -11,7 +11,10 @@
   "xlsx_filename": "附件_1150907起校區往返A7接駁車時刻表.xlsx",
   "traffic_page": "https://www.cgu.edu.tw/generalaffairs/Contents?nodeId=12887",
   "sports_day_announcement": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
-  "sports_day_attachment4": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False"
+  "sports_day_attachment4": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+  "xlsx_0915": "https://www.cgu.edu.tw/studentaffairs/Subject/Detail/85306?nodeId=18695",
+  "xlsx_0915_filename": "附件_1150907起校區往返A7接駁車時刻表_0915.xlsx",
+  "xlsx_0915_note": "9/15 修訂版；時刻與 9/3 版相同，僅聯絡人不同。"
  },
  "caveat": {
   "zh": "因應路況變化，實際抵達時間可能有3～5分鐘誤差或滿載時會提早駛離，敬請提早候車等候。",
@@ -1921,5 +1924,10 @@
     }
    ]
   }
- ]
+ ],
+ "day_rules": {
+  "saturday": "週六常態無校車，請改搭 603／967／202",
+  "break": "寒暑假班表另行公告，請看總務處",
+  "checked": "2026-11-21"
+ }
 }
