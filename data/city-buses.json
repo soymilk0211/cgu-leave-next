@@ -1,0 +1,230 @@
+{
+ "schema_version": 1,
+ "name": "967 / 967直 / 202 / 603 static timetables + official live-status links",
+ "last_checked": "2026-11-21",
+ "disclaimer": "Static transcription only. No TDX, no live ETA. Times below are NOT 長庚大學候車亭 arrival times unless stated.",
+ "routes": [
+  {
+   "id": "967",
+   "name": "967",
+   "origins": [
+    "候車亭"
+   ],
+   "dests": [
+    "林口長庚"
+   ],
+   "live_url": "https://ebus.gov.taipei/EBus/VsSimpleMap?routeid=0400096700&gb=1",
+   "live_checked": "2026-11-21",
+   "timetable_status": "terminus_only",
+   "note": "以下是端點（體育大學行政教學大樓）發車時刻，不是長庚大學候車亭到站時刻；候車亭逐班時刻查不到官方分站表。須搭跑馬燈標示「往長庚大學」的車。",
+   "timetables": [
+    {
+     "kind": "平日",
+     "terminus": "體育大學行政教學大樓",
+     "times": [
+      "05:10",
+      "06:00",
+      "06:30",
+      "07:00",
+      "07:30",
+      "08:00",
+      "08:30",
+      "09:00",
+      "09:30",
+      "10:00",
+      "10:30",
+      "11:00",
+      "12:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00",
+      "17:30",
+      "18:00",
+      "18:30",
+      "19:00",
+      "19:30",
+      "20:00",
+      "20:40",
+      "21:30"
+     ]
+    },
+    {
+     "kind": "假日",
+     "terminus": "體育大學行政教學大樓",
+     "times": [
+      "05:10",
+      "06:30",
+      "07:50",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:20",
+      "14:40",
+      "16:00",
+      "17:00",
+      "18:00",
+      "19:00",
+      "20:00",
+      "21:30"
+     ]
+    }
+   ],
+   "source_url": "https://ebus.gov.taipei/Route/StopsOfRoute?routeid=0400096700",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "967直",
+   "name": "967 直",
+   "origins": [
+    "候車亭"
+   ],
+   "dests": [
+    "林口長庚"
+   ],
+   "live_url": "https://ebus.gov.taipei/EBus/VsSimpleMap?gb=0&routeid=0400096730",
+   "live_checked": "2026-11-21",
+   "timetable_status": "terminus_only",
+   "note": "以下是官方頁所列端點發車時刻，不是長庚大學候車亭到站時刻；候車亭逐班時刻查不到官方分站表。",
+   "timetables": [
+    {
+     "kind": "平日",
+     "terminus": null,
+     "times": [
+      "06:15",
+      "06:30",
+      "06:45",
+      "07:00",
+      "07:15",
+      "07:30",
+      "15:45",
+      "16:00",
+      "16:20",
+      "16:40",
+      "17:00",
+      "17:20",
+      "17:40",
+      "18:00"
+     ]
+    },
+    {
+     "kind": "假日",
+     "terminus": null,
+     "times": [
+      "07:30",
+      "08:10",
+      "09:30",
+      "10:30",
+      "11:30",
+      "12:20",
+      "12:40",
+      "13:00",
+      "14:00",
+      "15:20",
+      "16:30",
+      "17:30",
+      "18:30",
+      "19:30"
+     ]
+    }
+   ],
+   "source_url": "https://ebus.gov.taipei/Route/StopsOfRoute?routeid=0400096730",
+   "also_source": "https://pda5284.gov.taipei/MQS/routeinfo.jsp?rid=18128",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "202",
+   "name": "202",
+   "origins": [
+    "候車亭",
+    "A7"
+   ],
+   "dests": [
+    "A7",
+    "A7 機捷",
+    "林口長庚"
+   ],
+   "live_url": "https://yunbus.tw/#!route/TAO2020",
+   "live_checked": "2026-11-21",
+   "timetable_status": "unverified",
+   "note": "完整官方靜態班表查不到（未驗證），本頁不列任何 202 時間，也不確認有無 17:00 班次。請看官方動態頁。",
+   "timetables": [],
+   "source_url": "https://yunbus.tw/lite/route.php?id=TAO2020",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "603",
+   "name": "603",
+   "origins": [
+    "候車亭",
+    "A7"
+   ],
+   "dests": [
+    "A7",
+    "A7 機捷"
+   ],
+   "live_url": "https://yunbus.tw/lite/route.php?id=TAO6030",
+   "live_checked": "2026-11-21",
+   "timetable_status": "operator_unlabeled",
+   "note": "三重客運 603 時刻表 PDF（檔案日期 2025-03-07）未標示發車站或方向，以下不是候車亭到站時刻。",
+   "timetables": [
+    {
+     "kind": "平日",
+     "terminus": null,
+     "times": [
+      "06:00",
+      "06:30",
+      "07:00",
+      "07:30",
+      "08:00",
+      "08:30",
+      "09:00",
+      "09:30",
+      "10:00",
+      "10:30",
+      "11:00",
+      "12:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "15:40",
+      "16:20",
+      "16:50",
+      "17:30",
+      "18:20",
+      "19:10",
+      "20:00",
+      "21:00",
+      "22:00"
+     ]
+    },
+    {
+     "kind": "假日",
+     "terminus": null,
+     "times": [
+      "06:00",
+      "07:30",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:10",
+      "18:00",
+      "19:00",
+      "20:00",
+      "21:00",
+      "22:00"
+     ]
+    }
+   ],
+   "source_url": "https://www.sanchung-bus.com.tw/image/603.pdf",
+   "last_checked": "2026-11-21"
+  }
+ ]
+}
