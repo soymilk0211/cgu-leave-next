@@ -24,4 +24,4 @@ python3 -m http.server 8000
 
 ## 測試
 
-`node --test tests/`（無相依套件）。頁面需透過靜態伺服器開啟（例如 `python3 -m http.server`），因為會 fetch 資料檔。
+`node --test tests/*.test.js`（無相依套件）。頁面需透過靜態伺服器開啟（例如 `python3 -m http.server`），因為會 fetch 資料檔。
