@@ -11,6 +11,8 @@
     "候車亭"
    ],
    "dests": [
+    "A7",
+    "A7 機捷",
     "林口長庚"
    ],
    "live_url": "https://ebus.gov.taipei/EBus/VsSimpleMap?routeid=0400096700&gb=1",
@@ -82,6 +84,8 @@
     "候車亭"
    ],
    "dests": [
+    "A7",
+    "A7 機捷",
     "林口長庚"
    ],
    "live_url": "https://ebus.gov.taipei/EBus/VsSimpleMap?gb=0&routeid=0400096730",

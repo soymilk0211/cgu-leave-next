@@ -5,7 +5,7 @@ const { matchBuses } = require('../city-buses.js');
 const ids = (o, d) => matchBuses(data, o, d).routes.map((r) => r.id);
 
 test('matching', () => {
-  assert.deepStrictEqual(ids('候車亭', 'A7'), ['202', '603']);
+  assert.deepStrictEqual(ids('候車亭', 'A7'), ['967', '967直', '202', '603']);
   assert.deepStrictEqual(ids('候車亭', '林口長庚'), ['967', '967直', '202']);
   assert.deepStrictEqual(ids('明德樓', 'A7'), []);
   assert.ok(matchBuses(data, '候車亭', '台北').destUnfiltered);
