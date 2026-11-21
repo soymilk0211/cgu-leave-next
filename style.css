@@ -10,3 +10,4 @@ select { display: block; width: 100%; font: inherit; padding: 8px; }
 .placeholder { color: #999; margin: 0; }
 h3 { font-size: 1rem; margin: 12px 0 4px; }
 h4 { font-size: .9rem; margin: 8px 0 0; }
+.queue-map { padding-left: 1.2em; }

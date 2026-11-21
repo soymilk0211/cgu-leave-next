@@ -24,17 +24,33 @@
 
   <section id="jiahao"><h2>接下來 3 班家豪</h2><div id="jiahao-result">載入中…</div></section>
   <section id="buses"><h2>市區公車（967、967 直、202、603）</h2><div id="buses-result">載入中…</div></section>
-  <section id="peak"><h2>尖峰提示</h2><p class="placeholder">（待實作）</p></section>
-  <section id="queue"><h2>排哪一隊</h2><p class="placeholder">（待實作）</p></section>
-  <section id="alternatives"><h2>替代方案</h2><p class="placeholder">（待實作）</p></section>
+  <section id="peak" hidden><h2>尖峰提示</h2><p id="peak-text" class="caveat"></p></section>
+  <section id="queue"><h2>排哪一隊</h2>
+    <p class="muted">依總務處交通資訊頁「排隊路線示意圖（校區候車亭）」與 2026-09-30〈重申本校接駁車候車及乘車注意事項〉整理的文字示意，非即時排隊狀況。</p>
+    <ul class="queue-map">
+      <li><b>候車亭內</b>：家豪大巴往 A7（進入候車亭並按照標示排隊）</li>
+      <li><b>亭外左側箭頭</b>：967</li>
+      <li><b>亭前人行道箭頭</b>：603</li>
+      <li><b>202</b>：官方示意圖未標示排隊位置，請以現場標示為準。</li>
+    </ul>
+    <p>2026-09-30 公告：部分家豪班次不經明德樓，到候車亭後請全數下車；若要去明德樓，須重新排隊等後續有經停明德樓的班次，請勿留在車內等候後續班次。</p>
+    <p class="muted"><a href="https://www.cgu.edu.tw/generalaffairs/Subject/Detail/84979?nodeId=14072" target="_blank" rel="noopener noreferrer">總務處公告（另開分頁）</a>　<a href="https://www.cgu.edu.tw/generalaffairs/Contents?nodeId=12887" target="_blank" rel="noopener noreferrer">交通資訊頁（含排隊示意圖）</a></p></section>
+  <section id="alternatives"><h2>替代方案</h2>
+    <ul>
+      <li><b>走路到 A7</b>：官方交通頁寫約 15 分鐘。</li>
+      <li><b>uBike</b>：官方交通頁說明可騎至國立體育大學綜合體育館再步行；<a href="https://www.youbike.com.tw/region/main/stations/" target="_blank" rel="noopener noreferrer">站點地圖（另開分頁）</a>。本頁不提供即時車位數。</li>
+      <li><b>計程車／Uber 共乘</b>：僅提醒可考慮，本頁不叫車、不建群。</li>
+    </ul></section>
 
   <footer>
     <p>時刻表最後核對日期：<span id="checked">（尚未核對）</span></p>
+    <p>資料來源：<a href="https://www.cgu.edu.tw/generalaffairs/Subject/Detail/83896?nodeId=14072" target="_blank" rel="noopener noreferrer">家豪時刻表公告</a>、<a href="https://www.cgu.edu.tw/generalaffairs/Contents?nodeId=12887" target="_blank" rel="noopener noreferrer">總務處交通資訊</a>、<a href="https://www.cgu.edu.tw/generalaffairs/Subject/Detail/84979?nodeId=14072" target="_blank" rel="noopener noreferrer">2026-09-30 乘車注意事項</a>；各公車路線來源見上方各路線。</p>
     <p>本頁非長庚大學官方網站，班次以總務處與公路主管機關公告為準。</p>
   </footer>
 </main>
 <script src="city-buses.js"></script>
 <script src="next-trips.js"></script>
+<script src="peak.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

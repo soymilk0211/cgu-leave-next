@@ -1,5 +1,7 @@
 (async function () {
   const $ = (id) => document.getElementById(id);
+  const showPeak = () => { const p = Peak.isPeak(new Date()); $('peak').hidden = !p; $('peak-text').textContent = p ? Peak.PEAK_TEXT : ''; };
+  showPeak();
   const box = $('jiahao-result');
   let data;
   try { data = await (await fetch('data/a7-shuttle-timetable.json')).json(); }
@@ -56,7 +58,7 @@
       el.append(d);
     }
   }
-  const go = () => { render(new Date()); renderBuses(); };
+  const go = () => { render(new Date()); renderBuses(); showPeak(); };
   $('origin').onchange = $('dest').onchange = go;
   go();
 })();
