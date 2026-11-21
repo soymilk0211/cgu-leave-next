@@ -28,7 +28,35 @@
     add('p', r.caveat, 'caveat');
     add('p', '候車亭／明德樓的時間取自官方時刻表欄位，表上未註明是到達或發車時間。', 'muted');
   }
-  const go = () => render(new Date());
+  let buses;
+  try { buses = await (await fetch('data/city-buses.json')).json(); } catch (e) { buses = null; }
+  function renderBuses() {
+    const el = $('buses-result');
+    el.replaceChildren();
+    const add = (p, tag, text, cls) => { const e = document.createElement(tag); e.textContent = text; if (cls) e.className = cls; p.append(e); return e; };
+    if (!buses) return add(el, 'p', '無法載入公車資料。');
+    const m = CityBuses.matchBuses(buses, $('origin').value, $('dest').value);
+    if (m.destUnfiltered) add(el, 'p', '此目的地的各路線終點尚未逐一核對，僅依出發點列出。', 'muted');
+    if (!m.routes.length) add(el, 'p', '沒有已核對的市區公車符合此出發點／目的地。');
+    for (const r of m.routes) {
+      const d = document.createElement('div');
+      add(d, 'h3', r.name);
+      add(d, 'p', r.note, 'caveat');
+      if (r.timetable_status === 'unverified') add(d, 'p', '靜態班表：查不到（未驗證）');
+      for (const t of r.timetables) {
+        add(d, 'h4', t.kind + (t.terminus ? '（' + t.terminus + '發車）' : ''));
+        add(d, 'p', t.times.join('、'));
+      }
+      const a = add(d, 'p', ''); const l = document.createElement('a');
+      l.href = r.live_url; l.target = '_blank'; l.rel = 'noopener noreferrer'; l.textContent = '官方即時動態頁（另開分頁）';
+      a.append(l);
+      const s = add(d, 'p', '資料來源：', 'muted'); const sa = document.createElement('a');
+      sa.href = r.source_url; sa.target = '_blank'; sa.rel = 'noopener noreferrer'; sa.textContent = r.source_url;
+      s.append(sa, '　最後核對：' + r.last_checked);
+      el.append(d);
+    }
+  }
+  const go = () => { render(new Date()); renderBuses(); };
   $('origin').onchange = $('dest').onchange = go;
   go();
 })();
