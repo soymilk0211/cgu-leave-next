@@ -6,7 +6,7 @@
 
 ## 現況
 
-規格見 [`spec.md`](./spec.md)。目前只有單欄頁面骨架（`index.html`、`style.css`、`app.js`），各區塊為佔位，尚未部署。請先在本機預覽，不要把這個 repo 設成正式網站或自動部署。
+規格見 [`spec.md`](./spec.md)。頁面內容已齊（含尖峰提示、排隊圖解、替代方案、頁尾）。請先在本機預覽，不要把這個 repo 設成正式網站或自動部署。
 
 ## 本機預覽
 
@@ -24,4 +24,4 @@ python3 -m http.server 8000
 
 ## 測試
 
-`node --test tests/`（無相依套件）。頁面需透過靜態伺服器開啟（例如 `python3 -m http.server`），因為會 fetch 資料檔。
+`node --test tests/*.test.js`（無相依套件）。頁面需透過靜態伺服器開啟（例如 `python3 -m http.server`），因為會 fetch 資料檔。
