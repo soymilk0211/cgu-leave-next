@@ -1,0 +1,1925 @@
+{
+ "schema_version": 1,
+ "name": "家豪 (捷運A7站 ↔ 校區 shuttle) timetable",
+ "effective_from": "2026-09-07",
+ "announced": "2026-09-03",
+ "timezone": "Asia/Taipei",
+ "last_checked": "2026-11-21",
+ "sources": {
+  "announcement": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/83896?nodeId=14072",
+  "xlsx": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+  "xlsx_filename": "附件_1150907起校區往返A7接駁車時刻表.xlsx",
+  "traffic_page": "https://www.cgu.edu.tw/generalaffairs/Contents?nodeId=12887",
+  "sports_day_announcement": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+  "sports_day_attachment4": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False"
+ },
+ "caveat": {
+  "zh": "因應路況變化，實際抵達時間可能有3～5分鐘誤差或滿載時會提早駛離，敬請提早候車等候。",
+  "en": "Actual arrival may be 3–5 minutes off; a full bus may leave early.",
+  "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+  "last_checked": "2026-11-21"
+ },
+ "disclaimer": "Static timetable transcription only. No live/GPS/ETA data.",
+ "stops": {
+  "a7_exit1": {
+   "name": "A7站1號出口",
+   "timetable_column": true
+  },
+  "meide": {
+   "name": "明德樓",
+   "timetable_column": true
+  },
+  "campus_shelter": {
+   "name": "校區候車亭",
+   "timetable_column": true,
+   "note": "xlsx header is just 校區候車亭; it does not say arrive vs depart."
+  },
+  "corp_museum": {
+   "name": "企業文物館前招呼站",
+   "timetable_column": false,
+   "note": "On the route but has no time column; do not invent departure times."
+  },
+  "yellow_lot": {
+   "name": "校區露天停車場黃網區",
+   "timetable_column": false
+  },
+  "cgust_bus_stop": {
+   "name": "長庚科大公車站牌前",
+   "timetable_column": false
+  },
+  "cgust_dorm3": {
+   "name": "科大三舍",
+   "timetable_column": false
+  }
+ },
+ "not_stops": [
+  {
+   "name": "林口長庚醫院",
+   "note": "Not a 家豪 stop on either official sheet. No hospital-shuttle times exist in this file; none verified.",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  }
+ ],
+ "routes": {
+  "direct_loop": {
+   "stops": [
+    "a7_exit1",
+    "campus_shelter",
+    "corp_museum",
+    "a7_exit1"
+   ],
+   "detours_via_meide": false,
+   "note": "Peak route, and also 12:05/12:20.",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "offpeak_detour_loop": {
+   "stops": [
+    "a7_exit1",
+    "yellow_lot",
+    "cgust_bus_stop",
+    "cgust_dorm3",
+    "meide",
+    "campus_shelter",
+    "corp_museum",
+    "a7_exit1"
+   ],
+   "detours_via_meide": true,
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "meide_start_loop": {
+   "stops": [
+    "meide",
+    "campus_shelter",
+    "corp_museum",
+    "a7_exit1",
+    "yellow_lot",
+    "cgust_bus_stop",
+    "cgust_dorm3",
+    "meide"
+   ],
+   "detours_via_meide": true,
+   "note": "Second sheet. Relation to sheet-1 trips is not stated by the source; do not merge or dedupe.",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "sports_day_direct_loop": {
+   "stops": [
+    "a7_exit1",
+    "campus_shelter",
+    "corp_museum",
+    "a7_exit1"
+   ],
+   "valid_on": "2026-11-21",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "sports_day_meide_loop": {
+   "stops": [
+    "meide",
+    "campus_shelter",
+    "corp_museum",
+    "a7_exit1",
+    "yellow_lot",
+    "a7_exit1"
+   ],
+   "valid_on": "2026-11-21",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+   "last_checked": "2026-11-21"
+  }
+ },
+ "peak_rule": {
+  "peak_windows_a7_departure": [
+   [
+    "07:05",
+    "08:50"
+   ],
+   [
+    "16:20",
+    "18:05"
+   ]
+  ],
+  "offpeak_windows_a7_departure": [
+   [
+    "09:05",
+    "15:40"
+   ],
+   [
+    "18:35",
+    "21:35"
+   ]
+  ],
+  "peak": "No 明德 stop (direct_loop).",
+  "offpeak": "Trips marked ＊ in the xlsx detour via 明德 (offpeak_detour_loop).",
+  "exception": {
+   "a7_departures": [
+    "12:05",
+    "12:20"
+   ],
+   "rule": "Skip 校區露天停車場黃網區, 長庚科大公車站牌前, 科大三舍, 明德樓 (direct_loop)."
+  },
+  "sun_holiday_note": "Sun/holiday ＊ marks appear only on 16:35, 17:05, 17:35 (these have 明德 times). 18:05–21:35 have no ＊ and no 明德 time, so detours_via_meide=false as in the xlsx, even though 18:35–21:35 is inside the stated off-peak window. Encoded literally; not resolved.",
+  "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+  "last_checked": "2026-11-21"
+ },
+ "service_calendar": {
+  "mon_fri": {
+   "status": "listed",
+   "trip_schedules": [
+    "mon_fri"
+   ],
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "friday_and_preholiday_extras": {
+   "status": "listed",
+   "trip_schedules": [
+    "friday_preholiday_extra"
+   ],
+   "rule": "◎以下專車僅於星期例假日前夕行駛 (sheet header: 週五(Fri)加班車). Source gives no holiday calendar; this file does not define which dates are 例假日前夕.",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "sun_holiday": {
+   "status": "listed_afternoon_only",
+   "trip_schedules": [
+    "sun_holiday"
+   ],
+   "note": "Earliest listed A7 departure is 16:35. No morning Sun/holiday trips are listed; none invented.",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "saturday": {
+   "status": "unverified",
+   "note": "xlsx has only Mon–Fri and 星期(例假)日 columns; Saturday is not stated. Do not assume service or no service. Exception: 2026-11-21 override.",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  "continuous_holiday": {
+   "status": "verified",
+   "rules": {
+    "day_before": "Run the Friday schedule (星期五班次).",
+    "during": "No service (停駛).",
+    "last_day": "Run the Sunday schedule (星期日班次)."
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/Contents?nodeId=12887",
+   "last_checked": "2026-11-21"
+  },
+  "winter_summer_break": {
+   "status": "unverified",
+   "note": "Special winter/summer-break table NOT found on the official traffic page or traffic-management list as of 2026-11-21. Unknown whether service differs; no times encoded.",
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/Contents?nodeId=12887",
+   "last_checked": "2026-11-21"
+  }
+ },
+ "trips": [
+  {
+   "id": "wk-01",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 1,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "07:05",
+    "meide": null,
+    "campus_shelter": "07:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-02",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 2,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "07:20",
+    "meide": null,
+    "campus_shelter": "07:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-03",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 3,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "07:35",
+    "meide": null,
+    "campus_shelter": "07:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-04",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 4,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "07:50",
+    "meide": null,
+    "campus_shelter": "07:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-05",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 5,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "08:05",
+    "meide": null,
+    "campus_shelter": "08:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-06",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 6,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "08:20",
+    "meide": null,
+    "campus_shelter": "08:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-07",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 7,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "08:35",
+    "meide": null,
+    "campus_shelter": "08:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-08",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 8,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "08:50",
+    "meide": null,
+    "campus_shelter": "08:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-09",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 9,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "09:05",
+    "meide": "09:25",
+    "campus_shelter": "09:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-10",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 10,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "09:35",
+    "meide": "09:55",
+    "campus_shelter": "10:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-11",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 11,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "10:05",
+    "meide": "10:25",
+    "campus_shelter": "10:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-12",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 12,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "10:35",
+    "meide": "10:55",
+    "campus_shelter": "11:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-13",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 13,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "11:05",
+    "meide": "11:25",
+    "campus_shelter": "11:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-14",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 14,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "11:35",
+    "meide": "11:55",
+    "campus_shelter": "12:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-15",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 15,
+   "route": "direct_loop",
+   "peak_class": "noon_exception_skip_meide",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "12:05",
+    "meide": null,
+    "campus_shelter": "12:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-16",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 16,
+   "route": "direct_loop",
+   "peak_class": "noon_exception_skip_meide",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "12:20",
+    "meide": null,
+    "campus_shelter": "12:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-17",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 17,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "13:10",
+    "meide": "13:30",
+    "campus_shelter": "13:35"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-18",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 18,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "13:40",
+    "meide": "14:00",
+    "campus_shelter": "14:05"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-19",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 19,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "14:10",
+    "meide": "14:30",
+    "campus_shelter": "14:35"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-20",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 20,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "14:40",
+    "meide": "15:00",
+    "campus_shelter": "15:05"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-21",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 21,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "15:10",
+    "meide": "15:30",
+    "campus_shelter": "15:35"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-22",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 22,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "15:40",
+    "meide": "16:00",
+    "campus_shelter": "16:05"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-23",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 23,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "16:20",
+    "meide": null,
+    "campus_shelter": "16:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-24",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 24,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "16:35",
+    "meide": null,
+    "campus_shelter": "16:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-25",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 25,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "16:50",
+    "meide": null,
+    "campus_shelter": "16:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-26",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 26,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "17:05",
+    "meide": null,
+    "campus_shelter": "17:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-27",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 27,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "17:20",
+    "meide": null,
+    "campus_shelter": "17:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-28",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 28,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "17:35",
+    "meide": null,
+    "campus_shelter": "17:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-29",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 29,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "17:50",
+    "meide": null,
+    "campus_shelter": "17:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-30",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 30,
+   "route": "direct_loop",
+   "peak_class": "peak",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "18:05",
+    "meide": null,
+    "campus_shelter": "18:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-31",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 31,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "18:35",
+    "meide": "18:55",
+    "campus_shelter": "19:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-32",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 32,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "19:05",
+    "meide": "19:25",
+    "campus_shelter": "19:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-33",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 33,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "19:35",
+    "meide": "19:55",
+    "campus_shelter": "20:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-34",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 34,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "20:05",
+    "meide": "20:25",
+    "campus_shelter": "20:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-35",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 35,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "20:35",
+    "meide": "20:55",
+    "campus_shelter": "21:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-36",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 36,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "21:05",
+    "meide": "21:25",
+    "campus_shelter": "21:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "wk-37",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 37,
+   "route": "offpeak_detour_loop",
+   "peak_class": "offpeak",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "21:35",
+    "meide": "21:55",
+    "campus_shelter": "22:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-27",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 27,
+   "route": "offpeak_detour_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "16:35",
+    "meide": "16:55",
+    "campus_shelter": "17:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-28",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 28,
+   "route": "offpeak_detour_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "17:05",
+    "meide": "17:25",
+    "campus_shelter": "17:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-29",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 29,
+   "route": "offpeak_detour_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "17:35",
+    "meide": "17:55",
+    "campus_shelter": "18:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-30",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 30,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "18:05",
+    "meide": null,
+    "campus_shelter": "18:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-31",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 31,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "18:20",
+    "meide": null,
+    "campus_shelter": "18:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-32",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 32,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "18:35",
+    "meide": null,
+    "campus_shelter": "18:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-33",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 33,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "18:50",
+    "meide": null,
+    "campus_shelter": "18:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-34",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 34,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "19:05",
+    "meide": null,
+    "campus_shelter": "19:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-35",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 35,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "19:20",
+    "meide": null,
+    "campus_shelter": "19:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-36",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 36,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "19:35",
+    "meide": null,
+    "campus_shelter": "19:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-37",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 37,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "19:50",
+    "meide": null,
+    "campus_shelter": "19:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-38",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 38,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "20:05",
+    "meide": null,
+    "campus_shelter": "20:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-39",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 39,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "20:20",
+    "meide": null,
+    "campus_shelter": "20:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-40",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 40,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "20:35",
+    "meide": null,
+    "campus_shelter": "20:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-41",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 41,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "20:50",
+    "meide": null,
+    "campus_shelter": "20:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-42",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 42,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "21:05",
+    "meide": null,
+    "campus_shelter": "21:10"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-43",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 43,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "21:20",
+    "meide": null,
+    "campus_shelter": "21:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "sun-44",
+   "schedule": "sun_holiday",
+   "xlsx_sheet": "A7站←→校區",
+   "xlsx_row_no": 44,
+   "route": "direct_loop",
+   "peak_class": "as_marked_in_xlsx",
+   "detours_via_meide": false,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "a7_exit1": "21:35",
+    "meide": null,
+    "campus_shelter": "21:40"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-01",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 1,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "07:37"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-02",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 2,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "08:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-03",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 3,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "08:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-04",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 4,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "09:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-05",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 5,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "09:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-06",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 6,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "09:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-07",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 7,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "09:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-08",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 8,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "10:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-09",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 9,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "10:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-10",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 10,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "10:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-11",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 11,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "10:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-12",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 12,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "11:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-13",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 13,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "11:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-14",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 14,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "11:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-15",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 15,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "13:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-16",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 16,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "14:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-17",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 17,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "14:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-18",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 18,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "15:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-19",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 19,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "15:30"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-20",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 20,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "16:00"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-21",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 21,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "18:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-22",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 22,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "19:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-23",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 23,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "19:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-24",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 24,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "20:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-25",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 25,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "20:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-26",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 26,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "21:25"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-wk-27",
+   "schedule": "mon_fri",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 27,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": false,
+   "stop_times": {
+    "meide": "21:55"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-01",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 18,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "15:15"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-02",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 19,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "15:45"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-03",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 20,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "16:15"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-04",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 21,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "16:45"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-05",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 22,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "17:15"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-06",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 23,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "17:45"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-07",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 24,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "18:15"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-08",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 25,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "18:45"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  },
+  {
+   "id": "mdl-fri-09",
+   "schedule": "friday_preholiday_extra",
+   "xlsx_sheet": "明德樓←→校區←→A7站",
+   "xlsx_row_no": 26,
+   "route": "meide_start_loop",
+   "peak_class": "not_classified_by_source",
+   "detours_via_meide": true,
+   "is_friday_or_preholiday_extra": true,
+   "stop_times": {
+    "meide": "19:15"
+   },
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/82a2e7b6-e012-447d-8fad-608c2f7e3bca?nodeId=14072&sId=83896&isCms=False",
+   "last_checked": "2026-11-21"
+  }
+ ],
+ "overrides": [
+  {
+   "id": "sports-day-2026-11-21",
+   "valid_on": "2026-11-21",
+   "valid_only_on_this_date": true,
+   "replaces_regular_tables_on_that_date": true,
+   "warning": "Valid on 2026-11-21 only. Never use as the regular Sunday/holiday table; ignore on any other date.",
+   "notes": [
+    "＊17:05 教職員專車 (第一醫學大樓→A7站2號出口) runs as normal; it is a staff shuttle, not a general shelter trip, and is not encoded as a trip."
+   ],
+   "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+   "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+   "last_checked": "2026-11-21",
+   "trips": [
+    {
+     "id": "sports-01",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "07:20",
+      "campus_shelter": "07:25"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "am",
+     "detours_via_meide": false,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-02",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "07:35",
+      "campus_shelter": "07:40"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "am",
+     "detours_via_meide": false,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-03",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "07:50",
+      "campus_shelter": "07:55"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "am",
+     "detours_via_meide": false,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-04",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "08:05",
+      "campus_shelter": "08:10"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "am",
+     "detours_via_meide": false,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-05",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "08:20",
+      "campus_shelter": "08:25"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "am",
+     "detours_via_meide": false,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-06",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "15:45",
+      "campus_shelter": "15:50"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "pm",
+     "detours_via_meide": false,
+     "asterisk_in_source": true
+    },
+    {
+     "id": "sports-07",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "16:00",
+      "campus_shelter": "16:05"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "pm",
+     "detours_via_meide": false,
+     "asterisk_in_source": true
+    },
+    {
+     "id": "sports-08",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "16:15",
+      "campus_shelter": "16:20"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "pm",
+     "detours_via_meide": false,
+     "asterisk_in_source": true
+    },
+    {
+     "id": "sports-09",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "16:30",
+      "campus_shelter": "16:35"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "pm",
+     "detours_via_meide": false,
+     "asterisk_in_source": true
+    },
+    {
+     "id": "sports-10",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_direct_loop",
+     "stop_times": {
+      "a7_exit1": "16:45",
+      "campus_shelter": "16:50"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "period": "pm",
+     "detours_via_meide": false,
+     "asterisk_in_source": true
+    },
+    {
+     "id": "sports-meide-01",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_meide_loop",
+     "stop_times": {
+      "meide": "17:35"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "detours_via_meide": true,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-meide-02",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_meide_loop",
+     "stop_times": {
+      "meide": "18:05"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "detours_via_meide": true,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-meide-03",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_meide_loop",
+     "stop_times": {
+      "meide": "18:35"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "detours_via_meide": true,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-meide-04",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_meide_loop",
+     "stop_times": {
+      "meide": "19:05"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "detours_via_meide": true,
+     "asterisk_in_source": false
+    },
+    {
+     "id": "sports-meide-05",
+     "schedule": "override_2026-11-21",
+     "route": "sports_day_meide_loop",
+     "stop_times": {
+      "meide": "19:35"
+     },
+     "source_url": "https://www.cgu.edu.tw/generalaffairs/ServerFile/Get/91b43d68-cd5b-4e4d-bf99-1ce500e141be?nodeId=14072&sId=86116&isCms=False",
+     "announcement_url": "https://www.cgu.edu.tw/generalaffairs/Subject/Detail/86116?nodeId=14072",
+     "last_checked": "2026-11-21",
+     "detours_via_meide": true,
+     "asterisk_in_source": false
+    }
+   ]
+  }
+ ]
+}
