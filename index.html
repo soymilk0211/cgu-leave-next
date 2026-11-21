@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>離校下一班</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>離校下一班</h1>
+  <p class="muted">時區：台北時間（Asia/Taipei）</p>
+
+  <section id="route">
+    <h2>出發與目的地</h2>
+    <label>出發點
+      <select id="origin"><option selected>候車亭</option><option>明德樓</option><option>A7</option></select>
+    </label>
+    <label>目的地
+      <select id="dest"><option selected>A7</option><option>A7 機捷</option><option>台北</option><option>林口長庚</option><option>桃園</option></select>
+    </label>
+    <p class="muted">選項為暫定，須以官方時刻表核對站名。</p>
+  </section>
+
+  <section id="jiahao"><h2>接下來 3 班家豪</h2><p class="placeholder">（待實作）</p></section>
+  <section id="buses"><h2>市區公車（967、967 直、202、603）</h2><p class="placeholder">（待實作）</p></section>
+  <section id="peak"><h2>尖峰提示</h2><p class="placeholder">（待實作）</p></section>
+  <section id="queue"><h2>排哪一隊</h2><p class="placeholder">（待實作）</p></section>
+  <section id="alternatives"><h2>替代方案</h2><p class="placeholder">（待實作）</p></section>
+
+  <footer>
+    <p>時刻表最後核對日期：（尚未核對）</p>
+    <p>本頁非長庚大學官方網站，班次以總務處與公路主管機關公告為準。</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
